@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo 4 - Segunda Guerra Mundial</title>
+    <!-- Conectamos el archivo de estilos -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    
+    <header>
+        <span class="etiqueta">Grupo 4 • Historia Contemporánea</span>
+        <h1>Segunda Guerra Mundial: Nazismo en Alemania y Fascismo en Italia</h1>
+        <p><strong>Integrantes:</strong> [Coloca aquí los nombres de tu equipo]</p>
+        
+        <div class="caja-pregunta">
+            <h3>Pregunta Histórica Central:</h3>
+            <p>"¿Cómo dos regímenes que prometieron orden y grandeza nacional terminaron destruyendo sus propios países y a Europa entera?"</p>
+        </div>
+    </header>
+
+    
+    <nav>
+        <a href="#contexto">1. Contexto</a>
+        <a href="#red">2. Red Circular</a>
+        <a href="#video">3. Video</a>
+        <a href="#explorador">4. Explorador</a>
+        <a href="#conclusiones">5. Conclusiones</a>
+        <a href="#fuentes">6. Fuentes</a>
+    </nav>
+
+    <main class="contenedor">
+
+       
+        <section id="contexto" class="bloque">
+            <h2>1. Contexto Histórico: El camino al abismo</h2>
+            <p>Tras la Primera Guerra Mundial, Europa quedó devastada económica y moralmente. Esto facilitó el ascenso de regímenes totalitarios.</p>
+            
+            <div class="grid-dos">
+                <div class="tarjeta-contexto">
+                    <h3>Alemania: El Tercer Reich</h3>
+                    <ul>
+                        <li><strong>Tratado de Versalles:</strong> Pérdida del 13% de territorio, desmilitarización de Renania y duras reparaciones económicas.</li>
+                        <li><strong>Puñalada por la espalda:</strong> Creencia impulsada por sectores conservadores (como Hindenburg) de que se perdió por traición interna.</li>
+                        <li><strong>Crisis de 1929:</strong> Hiperinflación y desempleo masivo que impulsaron el apoyo a Hitler.</li>
+                        <li><strong>Llegada de Hitler (1933):</strong> Tras el incendio del Reichstag, obtuvo plenos poderes y firmó el Pacto Ribbentrop-Mólotov con la URSS.</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta-contexto">
+                    <h3>Italia: El Fascismo de Mussolini</h3>
+                    <ul>
+                        <li><strong>La "Victoria Mutilada":</strong> Frustración tras la Primera Guerra Mundial al no recibir los territorios prometidos.</li>
+                        <li><strong>Crisis social y temor comunista:</strong> Huelgas y crisis que llevaron a apoyar a los "Camisas Negras".</li>
+                        <li><strong>Marcha sobre Roma (1922):</strong> Benito Mussolini tomó el poder e instauró un Estado totalitario.</li>
+                        <li><strong>Eje Roma-Berlín:</strong> Alianza con Alemania que arrastró a Italia a una guerra sin preparación industrial.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="red" class="bloque">
+            <h2>2. Red Interactiva de Relaciones Históricas</h2>
+            <p>Haz clic en cualquier líder en el círculo para ver su información y descubrir con qué otros líderes tuvo relación directa:</p>
+            
+            <!-- Contenedor redondo donde ubicamos los 5 círculos -->
+            <div class="mapa-circular">
+                <div id="nodo-hitler" class="nodo-circulo pos-hitler" onclick="verLider('hitler')">Adolf Hitler</div>
+                <div id="nodo-mussolini" class="nodo-circulo pos-mussolini" onclick="verLider('mussolini')">Benito Mussolini</div>
+                <div id="nodo-stalin" class="nodo-circulo pos-stalin" onclick="verLider('stalin')">Iósif Stalin</div>
+                <div id="nodo-churchill" class="nodo-circulo pos-churchill" onclick="verLider('churchill')">Winston Churchill</div>
+                <div id="nodo-roosevelt" class="nodo-circulo pos-roosevelt" onclick="verLider('roosevelt')">Franklin D. Roosevelt</div>
+            </div>
+
+            <!-- Panel donde recién aparece la info al apretar un círculo -->
+            <div id="panel-conexion" class="panel-info">
+                <em>Haz clic en uno de los círculos de arriba para ver su información y sus conexiones.</em>
+            </div>
+        </section>
+
+        
+        <section id="video" class="bloque">
+            <h2>3. Producción Audiovisual del Equipo</h2>
+            <p>Video explicativo elaborado por el Grupo 4:</p>
+            <video controls width="100%">
+                <source src="video_grupo4.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </section>
+
+        
+        <section id="explorador" class="bloque">
+            <h2>4. Explorador de Batallas por Frente</h2>
+            <p>Selecciona un frente de batalla para filtrar los acontecimientos clave:</p>
+            
+            <div class="controles-filtro">
+                <label for="select-frente"><strong>Filtrar por Frente:</strong></label>
+                <select id="select-frente" onchange="filtrarBatallas()">
+                    <option value="todos">Todos los frentes</option>
+                    <option value="occidental">Europa Occidental (Día D / Ardenas)</option>
+                    <option value="oriental">Europa Oriental (Stalingrado)</option>
+                    <option value="pacifico">Frente del Pacífico (Pearl Harbor / Bombas)</option>
+                </select>
+            </div>
+
+            <div id="caja-batallas" class="grid-tarjetas"></div>
+        </section>
+
+       
+        <section id="conclusiones" class="bloque">
+            <h2>5. Conclusiones</h2>
+            <p>En respuesta a nuestra pregunta inicial, tanto el nazismo alemán como el fascismo italiano lograron consolidarse explotando el resentimiento económico y social posterior a la Primera Guerra Mundial. Sin embargo, al basarse en la expansión militar agresiva y abrir múltiples frentes simultáneos, ambos regímenes provocaron su propia destrucción total en 1945 y dejaron a Europa en ruinas.</p>
+        </section>
+
+       
+        <section id="fuentes" class="bloque">
+            <h2>6. Fuentes Bibliográficas</h2>
+            <ul>
+                <li>Hobsbawm, E. (1995). <em>Historia del siglo XX</em>. Crítica.</li>
+                <li>Kershaw, I. (2000). <em>Hitler, 1936-1945: Némesis</em>. Península.</li>
+                <li>Paxton, R. O. (2005). <em>Anatomía del fascismo</em>. Península.</li>
+                <li>Beevor, A. (2012). <em>La Segunda Guerra Mundial</em>. Pasado & Presente.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Proyecto Académico - Grupo 4 | Historia Contemporánea</p>
+    </footer>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
